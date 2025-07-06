@@ -347,11 +347,7 @@ function getNodeColor(status: string) {
   }
 }
 
-interface WalletDetailProps {
-  onBack: () => void;
-}
-
-export default function WalletDetail({ onBack }: WalletDetailProps) {
+export default function WalletDetail() {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("flow");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -362,10 +358,7 @@ export default function WalletDetail({ onBack }: WalletDetailProps) {
       <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 px-4 sm:px-6 py-4 shadow-sm z-50">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <button
-              onClick={onBack}
-              className="p-2 hover:bg-gray-100 text-gray-600 hover:text-gray-900 rounded-lg transition-colors"
-            >
+            <button className="p-2 hover:bg-gray-100 text-gray-600 hover:text-gray-900 rounded-lg transition-colors">
               <ArrowLeft className="h-5 w-5" />
             </button>
             <div className="flex items-center space-x-2 sm:space-x-3">
